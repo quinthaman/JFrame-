@@ -1,0 +1,865 @@
+﻿
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="keywords" content="歌手,歌手列表,歌手资料,酷我音乐" />
+
+
+
+<script type="text/javascript" src="skin/js/pageload.js"></script>
+<meta name="shenma-site-verification" content="b7ed5dec18de366fe715545908c219d9_1456975136">
+<meta property="wb:webmaster" content="f22e6d1ecbe50469" />
+<meta property="qc:admins" content="140625776463577636" />
+<meta name="baidu_ssp_verify" content="84e6ea1523f69041df93583b5c4a2412">
+<meta name="google-site-verification" content="__rggxL8_R8LDb2_41gfmNLoGOIXdGRZTsQaShcrDIM" />
+<link href="http://image.kuwo.cn/website/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <meta name="description" content="酷我音乐网拥有海量的歌手库,华语、欧美、日韩歌手一网打尽。方便快捷的歌手分类索引,热门歌手、歌手全面展现。一点即播的音乐体验,为用户快速试听歌曲、下载歌曲提供更舒适的体验。酷我音乐网,试听歌曲更流畅,音质更完美。" />
+    <title>【歌手大全】_歌手排行榜_歌手搜索榜-酷我音乐</title>
+    <link rel="stylesheet" type="text/css" href="skin/css/reset.css">
+    <link rel="stylesheet" href="skin/css/jquery.mcustomscrollbar.css">
+    <link rel="stylesheet" href="skin/css/common.css">
+    <link rel="stylesheet" href="skin/css/player.css">
+    <link rel="stylesheet" type="text/css" href="skin/css/artist.css">
+	<!--[if lt IE 9]>
+		<style>
+			.artistLeft {position:relative}
+			.artistLeft .splice {position:absolute;width:100%;height:100%;background:url(skin/images/splicesmall.png);top:0px}
+			.rightContentBox .topSelect a.active {background:url(skin/images/select.jpg)}
+			.rightContentBox .topSelect .hot.active {background:url(skin/images/hot.png) no-repeat}
+		</style>
+	<![endif]-->
+	<script type="text/javascript" src="skin/js/jquery.js"></script>
+	<script type="text/javascript" src="skin/js/jquery.mcustomscrollbar.concat.min.js"></script>
+</head>
+<body ms-controller="player">
+
+
+
+<!-- 网站头部通用html -->
+<div id="top" kw_ver="1.0.0">
+	<div class="top">
+		<a class="logo" href="http://www.kuwo.cn?catalog=yueku2016"><img
+			src="skin/images/logo.jpg" alt="logo" /></a>
+		<ul class="nav">
+			<li><a
+
+				href="file:///C:/Users/Administrator/Desktop/项目1/新的文档%202.html">首页</a></li>
+			<li><a
+
+				href="/bang/index">榜单</a></li>
+			<li><a
+				class="active"
+				href="http://localhost:50775/wengxiyu/%E7%BD%91%E9%A1%B5%E6%AF%94%E8%B5%9B/%E6%AD%8C%E6%89%8B.html">歌手</a></li>
+			<li><a target="_blank"
+				 href="http://localhost:50775/wengxiyu/%E4%B8%8B%E8%BD%BD%E9%85%B7%E6%88%91%E5%AE%A2%E6%88%B7%E7%AB%AF/%E4%B8%8B%E8%BD%BD.html">下载酷我客户端</a></li>
+		</ul>
+		<div class="tools">
+			<div class="search">
+				<input type="text" name="search" placeholder="找到好音乐" />
+				<a class="searchBtn" href="javascript:;"></a>
+				<div class="searchInfo">
+					<ul class="songL">
+						<li ms-repeat="songArr"><a target="_blank"
+							ms-attr-href="http://www.kuwo.cn/yinyue/{{el.id}}/?catalog=yueku2016">
+								<span ms-attr-title="{{el.NAME}}" class="albName">{{el.NAME}}</span>
+								<span ms-attr-title="{{el.ARTIST}}">{{el.ARTIST}}</span>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="more">
+				<p>更多服务</p>
+				<ul>
+					<li><a target="_blank" onclick="picLog('www2016_2_vip')"
+						href="http://vip1.kuwo.cn/vip/added/vip_2016/index.jsp?from=1">VIP会员</a></li>
+					<li><a target="_blank"
+						href="http://www.kuwo.cn/album?catalog=yueku2016">专辑</a></li>
+					<li><a target="_blank"
+						href="http://yinyue.kuwo.cn/yy/cate_27.htm?catalog=yueku2016">分类</a></li>
+					<li><a target="_blank"
+						href="http://www.kuwo.cn/mv?catalog=yueku2016">MV</a></li>
+					<li><a target="_blank" onclick="picLog('www2016_2_huodong')"
+						href="http://huodong.kuwo.cn/huodong/st/starActivityServlet?classify=trophy&catalog=yueku2016">活动</a></li>
+					<li><a target="_blank"
+						href="http://tupian.kuwo.cn?catalog=yueku2016">图库</a></li>
+					<li><a target="_blank"
+						href="http://yule.kuwo.cn?catalog=yueku2016">娱乐</a></li>
+				</ul>
+			</div>
+		<!--	<ul class="choose opacity80">
+				<li class="show"><a target="_blank" onclick="picLog('www2016_2_xiu')"
+					href="http://g.koowo.com/g.real?aid=text_ad_3214&url=http://x.kuwo.cn/KuwoLive/OpenLiveRoomLinkForKw?from=1001008053">美女秀</a></li>
+				<li class="earphone"><a target="_blank" onclick="picLog('www2016_2_erji')"
+					href="http://g.koowo.com/g.real?aid=text_ad_3315&cid=&url=https://detail.tmall.com/item.htm?id=522001391451">耳机</a></li>
+				<li class="game"><a target="_blank" onclick="picLog('www2016_2_game')"
+					href="http://game.kuwo.cn/g/st/NewerIndex">游戏</a></li>
+				<li class="book"><a target="_blank" onclick="picLog('www2016_2_tingshu')"
+					href="http://tingshu.kuwo.cn/?catalog=yueku2016">i听</a></li>
+			</ul>-->
+		</div>
+	</div>
+</div>
+<input type="hidden" id="SYS_MAIN_HOST" value="http://www.kuwo.cn">
+<input type="hidden" id="SYS_PAGE_STAT" value="200" />
+<input type="hidden" id="SYS_FP" value="">
+<input type="hidden" id="SYS_NP" value="%2Fartist%2Findex">
+<!-- 音乐播放器 -->
+
+
+<!-- 播放器开始 -->
+	<div id="player">
+		<div class="playerSplice opacity95"></div>
+		<div id="playerBox">
+			<div class="player">
+				<!--<div class="open" class="opacity95"></div> -->
+				<div class="open lock" class="opacity95"></div>
+				<div class="playerLeft">
+					<div class="musicControll">
+						<div class="prev" id="wp_playPreBtn" title="上一首"></div>
+						<div class="play" id="wp_playBtn" title="暂停/播放"></div>
+						<div class="next" id="wp_playNextBtn" title="下一首"></div>
+					</div>
+					<img id="artist_Image" src="skin/images/50-50.jpg" onerror="imgOnError(this,'50')" />
+				</div>
+				<div class="playerMid">
+					<p id="wp_text">听音乐 用酷我</p>
+					<div id="prograssBar">
+						<div id="wp_bufBar">
+							<div class="prograssBar" id="wp_processBar"></div>
+							<a href="javascript:;" class="schedule_btn" id="wp_processBtn" style="left: 0"></a>
+						</div>
+					</div>
+				</div>
+				<div class="playerRight">
+					<p id="wp_playTime" class="opacity">00:00</p>
+					<div id="pinzhi">
+						<a class="changePz" href="javascript:down('artistindex');">流畅</a>
+					</div>
+					<div id="controllBtn">
+						<div class="sound" id="wp_mute">
+							<div id="soundBox">
+								<div class="soundBox">
+									<div id="soundPro">
+										<div class="soundPro" id="wp_volBar"></div>
+										<a href="javascript:;" id="wp_volBtn"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="loop" id="mode" href="javascript:;" title="顺序循环"></a>
+						<a class="kSong" title="k歌" onclick="picLog('www2016_2_kge')" target="_blank" href="http://k.kuwo.cn/"></a>
+						<div class="menu" title="列表"></div>
+						<a class="down click_log" data-click="artistindex_player_bar" title="下载" href="javascript:down('artistindex');"></a>
+						<div class="share" title="分享">
+							<div class="shareBox">
+								<div class="sharecontent">
+									<a href="javascript:;" class="quickShare new_sina" data-cmd="tsina" title="分享到新浪微博"></a>
+									<a href="javascript:;" class="quickShare new_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+									<a href="javascript:;" class="quickShare new_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+									<a href="javascript:;" class="quickShare new_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+									<a href="javascript:;" class="quickShare new_renren" data-cmd="renren" title="分享到人人网"></a>
+								</div>
+							</div>
+						</div>
+						<div class="ewm" title="二维码">
+							<div class="ewmBox">
+								<div class="ewmCon">
+									<img width="144" src="skin/images/ewm.png" />
+								</div>
+							</div>
+						</div>
+						<div id="addTips">
+							<p>已添加至播放列表</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 播放列表开始 -->
+			<div id="playList">
+				<div id="playListBox">
+					<img class="blur" src="skin/images/listboxbg.jpg" />
+					<div class="splice opacity90"></div>
+					<div id="playCon">
+						<!-- 歌词 -->
+						<div id="lrc">
+							<div class="splice"></div>
+							<p id="lrcName">听音乐 用酷我</p>
+							<div id="lrcConId"></div>
+						</div>
+						<!-- 列表 -->
+						<div id="musicList">
+							<div class="splice opacity30"></div>
+							<div class="listNum">
+								<p>播放列表({{model.playList.length}})</p>
+								<span title="关闭"></span>
+							</div>
+							<ul class="musicList scrollbar">
+								<li ms-repeat="playList" ms-attr-id="pl{{el.rid}}" ms-attr-data-pay="{{el.pay}}">
+									<div class="musicInfo">
+										<div class="name"><a ms-attr-href="javascript:wb_playSong('{{el.rid}}','{{el.name}}','{{el.art}}','{{el.pay}}');" ms-attr-title="{{el.name}}">{{el.name}}</a></div>
+										<div class="album" ms-attr-title="{{el.album}}">{{el.album}}</div>
+										<div class="artist" ms-attr-title="{{el.art}}">{{el.art}}</div>
+									</div>
+									<div class="listRight">
+										<div class="musicTools">
+											<a class="down click_log" data-click="artistindex_player_listen" title="下载" href="javascript:down('artistindex');"></a>
+											<div class="share" title="分享">
+												<div class="shareBox">
+													<div class="sharecontent">
+														<a href="javascript:;" class="quickShare new_sina" data-cmd="tsina" title="分享到新浪微博"></a>
+														<a href="javascript:;" class="quickShare new_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+														<a href="javascript:;" class="quickShare new_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+														<a href="javascript:;" class="quickShare new_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+														<a href="javascript:;" class="quickShare new_renren" data-cmd="renren" title="分享到人人网"></a>
+													</div>
+												</div>
+											</div>
+											<a class="ksong" title="k歌" onclick="picLog('www2016_2_kge')" target="_blank" href="http://k.kuwo.cn/"></a>
+											<a title="删除" class="delete" ms-attr-href="javascript:delPlSong('{{el.rid}}');" ms-click="$remove"></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="border opacity40"></div>
+						<!-- 列表结束 -->
+					</div>
+				</div>
+			</div>
+			<!-- 播放列表结束 -->
+		</div>
+	</div>
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1" height="1" id="dqPlayerSwf" style="position:absolute">
+		<param name="movie" value="/static/swf/dqplay.swf?1.swf" />
+		<param name="allowFullScreen" value="false" />
+		<param name="wmode" value="opaque" />
+		<param name="aloowScriptAccess" value="always" />
+		<param name="menu" value="false" />
+		<param name="allowScriptAccess" value="sameDomain" />
+		<param name="FlashVars" value="initplay=0&isloop=0&initjs=WebPlayer._playerInitOK&errmethod=WebPlayer._playerInitError&LoadLrcxDate=WebPlayer._setLrcxId&drawLrcx=WebPlayer._lrcxWordRoll&setLyricRoll=WebPlayer._lrcxRowRoll&endjs=WebPlayer._playEnd&commLogMethod=WebPlayer.sendPlayLog" />
+		<embed src="Flashn/dqplay.swf" name="dqPlayerSwf" quality="medium" width="1" height="1" wmode="opaque" FlashVars="initplay=0&isloop=0&initjs=WebPlayer._playerInitOK&errmethod=WebPlayer._playerInitError&LoadLrcxDate=WebPlayer._setLrcxId&drawLrcx=WebPlayer._lrcxWordRoll&setLyricRoll=WebPlayer._lrcxRowRoll&endjs=WebPlayer._playEnd&commLogMethod=WebPlayer.sendPlayLog"></embed>
+	</object>
+<!-- 播放器结束 -->
+<!-- playerScript start -->
+<script type="text/javascript" src="skin/js/avalon.js"></script>
+<script type="text/javascript" src="skin/js/kw_dqplayer_v2.js"></script>
+<script type="text/javascript" src="skin/js/kw_webplayer_v2.js"></script>
+<script type="text/javascript" src="skin/js/player.js"></script>
+<!-- playerScript end -->
+<div id="artistContent" class="comW" data-catId="0" data-letter=""  style="border-width: 1px;border-style: solid;-moz-border-radius: 11px;-khtml-border-radius: 11px;-webkit-border-radius: 11px;border-radius: 11px;padding:5px;">
+  <div class="leftNav fl" >
+    <span class="activeline"></span>
+    <a data-index="0" class="all">全部歌手</a>
+    <dl class="area">
+      <dt>
+        <span>华语歌手</span>
+      </dt>
+      <dd>
+        <a data-index="1" href="http://www.kuwo.cn/artist/index?categoryName=%E5%8D%8E%E8%AF%AD%E7%94%B7%E6%AD%8C%E6%89%8B&prefix=">华语男歌手</a>
+      </dd>
+      <dd>
+        <a data-index="2" href="http://www.kuwo.cn/artist/index?categoryName=%E5%8D%8E%E8%AF%AD%E5%A5%B3%E6%AD%8C%E6%89%8B&prefix=">华语女歌手</a>
+      </dd>
+      <dd>
+        <a data-index="3" href="/artist/index?categoryName=华语组合&prefix=">华语组合</a>
+      </dd>
+    </dl>
+    <dl class="area">
+      <dt>
+        <span>日韩歌手</span>
+      </dt>
+      <dd>
+        <a data-index="4" href="/artist/index?categoryName=日韩男歌手&prefix=">日韩男歌手</a>
+      </dd>
+      <dd>
+        <a data-index="5" href="/artist/index?categoryName=日韩女歌手&prefix=">日韩女歌手</a>
+      </dd>
+      <dd>
+        <a data-index="6" href="/artist/index?categoryName=日韩组合&prefix=">日韩组合</a>
+      </dd>
+    </dl>
+    <dl class="area" style="border:none;">
+      <dt>
+        <span>欧美歌手</span>
+      </dt>
+      <dd>
+        <a data-index="7" href="/artist/index?categoryName=欧美男歌手&prefix=">欧美男歌手</a>
+      </dd>
+      <dd>
+        <a data-index="8" href="/artist/index?categoryName=欧美女歌手&prefix=">欧美女歌手</a>
+      </dd>
+      <dd>
+        <a data-index="9" href="/artist/index?categoryName=欧美组合&prefix=">欧美组合</a>
+      </dd>
+    </dl>
+  </div>
+
+  <div class="rightContentBox fr">
+    <div class="topSelect">
+      <a href="javascript:;" class="hot fl active">热门</a>
+      <a href="javascript:;" class="select ">A</a>
+      <a href="javascript:;" class="select ">B</a>
+      <a href="javascript:;" class="select ">C</a>
+      <a href="javascript:;" class="select ">D</a>
+      <a href="javascript:;" class="select ">E</a>
+      <a href="javascript:;" class="select ">F</a>
+      <a href="javascript:;" class="select ">G</a>
+      <a href="javascript:;" class="select ">H</a>
+      <a href="javascript:;" class="select ">I</a>
+      <a href="javascript:;" class="select ">J</a>
+      <a href="javascript:;" class="select ">K</a>
+      <a href="javascript:;" class="select ">L</a>
+      <a href="javascript:;" class="select ">M</a>
+      <a href="javascript:;" class="select ">N</a>
+      <a href="javascript:;" class="select ">O</a>
+      <a href="javascript:;" class="select ">P</a>
+      <a href="javascript:;" class="select ">Q</a>
+      <a href="javascript:;" class="select ">R</a>
+      <a href="javascript:;" class="select ">S</a>
+      <a href="javascript:;" class="select ">T</a>
+      <a href="javascript:;" class="select ">U</a>
+      <a href="javascript:;" class="select ">V</a>
+      <a href="javascript:;" class="select ">W</a>
+      <a href="javascript:;" class="select ">X</a>
+      <a href="javascript:;" class="select ">Y</a>
+      <a href="javascript:;" class="select ">Z</a>
+      <a href="javascript:;" class="select ">#</a>
+    </div>
+    <div id="artistList">
+	    <ul class="artistBox">
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=薛之谦" class="artistLeft fl"><img src="skin/images/2990715719.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="947">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7119332?catalog=yueku2016" target="_blank">1.刚刚好</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6468891?catalog=yueku2016" target="_blank">2.演员</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7121887?catalog=yueku2016" target="_blank">3.为了遇见你-(音乐真人秀《端午金曲捞》推广歌曲)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/4147754?catalog=yueku2016" target="_blank">4.丑八怪-(电视剧《如果我爱你》插曲)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3620537?catalog=yueku2016" target="_blank">5.你还要我怎样</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=薛之谦" class="a_name">薛之谦</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=庄心妍" class="artistLeft fl"><img src="skin/images/2079425544.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="116570">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6657692?catalog=yueku2016" target="_blank">1.走着走着就散了</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3971731?catalog=yueku2016" target="_blank">2.以后的以后</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3971725?catalog=yueku2016" target="_blank">3.爱囚</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7098485?catalog=yueku2016" target="_blank">4.走着走着就散了</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6651913?catalog=yueku2016" target="_blank">5.再见只是陌生人</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=庄心妍" class="a_name">庄心妍</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=陈奕迅" class="artistLeft fl"><img src="skin/images/935104612.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="47">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/80403?catalog=yueku2016" target="_blank">1.十年</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7131129?catalog=yueku2016" target="_blank">2.在这个世界相遇-(电影《大鱼海棠》主题曲)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/239519?catalog=yueku2016" target="_blank">3.好久不见</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/110247?catalog=yueku2016" target="_blank">4.浮夸</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/239520?catalog=yueku2016" target="_blank">5.红玫瑰</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=陈奕迅" class="a_name">陈奕迅</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=周杰伦" class="artistLeft fl"><img src="skin/images/3914752958.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="336">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/324244?catalog=yueku2016" target="_blank">1.青花瓷</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7119718?catalog=yueku2016" target="_blank">2.前世情人</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7119717?catalog=yueku2016" target="_blank">3.床边故事</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3195905?catalog=yueku2016" target="_blank">4.红尘客栈</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/118980?catalog=yueku2016" target="_blank">5.夜曲</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=周杰伦" class="a_name">周杰伦</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=张学友" class="artistLeft fl"><img src="skin/images/2102134023.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="896">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/157606?catalog=yueku2016" target="_blank">1.一路上有你</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/157908?catalog=yueku2016" target="_blank">2.吻别</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/157767?catalog=yueku2016" target="_blank">3.等你等到我心痛</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/99011?catalog=yueku2016" target="_blank">4.心如刀割</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/99020?catalog=yueku2016" target="_blank">5.情书</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=张学友" class="a_name">张学友</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=祁隆" class="artistLeft fl"><img src="skin/images/4073459807.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="10495">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/1147548?catalog=yueku2016" target="_blank">1.等你等了那么久</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/5746426?catalog=yueku2016" target="_blank">2.爱你一生</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3970180?catalog=yueku2016" target="_blank">3.爱的世界只有你</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3970172?catalog=yueku2016" target="_blank">4.老婆你辛苦了</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/1149062?catalog=yueku2016" target="_blank">5.唱着情歌流着泪</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=祁隆" class="a_name">祁隆</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=孙露" class="artistLeft fl"><img src="skin/images/535904482.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="672">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6892642?catalog=yueku2016" target="_blank">1.酒干倘卖无-(电视剧《搭错车16版》片头曲)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/1024632?catalog=yueku2016" target="_blank">2.再度重相逢</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/3973554?catalog=yueku2016" target="_blank">3.伤了心的女人怎么了</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6586179?catalog=yueku2016" target="_blank">4.漂洋过海来看你</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6689187?catalog=yueku2016" target="_blank">5.路过的幸福</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=孙露" class="a_name">孙露</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=许嵩" class="artistLeft fl"><img src="skin/images/314146772.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="1887">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7095221?catalog=yueku2016" target="_blank">1.最佳歌手</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7117594?catalog=yueku2016" target="_blank">2.摄影艺术</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7056885?catalog=yueku2016" target="_blank">3.雅俗共赏</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7117597?catalog=yueku2016" target="_blank">4.燕归巢</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/349914?catalog=yueku2016" target="_blank">5.断桥残雪</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=许嵩" class="a_name">许嵩</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=tfboys" class="artistLeft fl"><img src="skin/images/284996700.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="128294">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/4855762?catalog=yueku2016" target="_blank">1.青春修炼手册</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7095180?catalog=yueku2016" target="_blank">2.守护家</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6561519?catalog=yueku2016" target="_blank">3.大梦想家</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6819236?catalog=yueku2016" target="_blank">4.不完美小孩</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6359029?catalog=yueku2016" target="_blank">5.宠爱</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=tfboys" class="a_name">tfboys</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=bigbang" class="artistLeft fl"><img src="skin/images/3125986085.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="125">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6506486?catalog=yueku2016" target="_blank">1.If You</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6462745?catalog=yueku2016" target="_blank">2.Bang Bang Bang</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/1137729?catalog=yueku2016" target="_blank">3.Fantastic Baby</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6906526?catalog=yueku2016" target="_blank">4.If You-(KR Ver.)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7119805?catalog=yueku2016" target="_blank">5.Bang Bang Bang(现场版)(Encore)</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=bigbang" class="a_name">bigbang</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=凤凰传奇" class="artistLeft fl"><img src="skin/images/1032192123.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="419">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/505795?catalog=yueku2016" target="_blank">1.最炫民族风</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/859822?catalog=yueku2016" target="_blank">2.自由飞翔</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/505787?catalog=yueku2016" target="_blank">3.郎的诱惑</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/505356?catalog=yueku2016" target="_blank">4.郎的诱惑</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6306417?catalog=yueku2016" target="_blank">5.感到幸福你就拍拍手</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=凤凰传奇" class="a_name">凤凰传奇</a>
+	      </li>
+
+	      <li>
+	        <div class="artistTop">
+	          <a href="/artist/content?name=g.e.m.邓紫棋" class="artistLeft fl"><img src="skin/images/2312174491.jpg" onerror="imgOnError(this,'artist')" /><span class="splice"></span></a>
+	          <div class="artistRight fr">
+	            <div class="artistnav" data-id="5371">
+	              <a href="javascript:;" class="title active">热歌</a>
+	              <a href="javascript:;" class="title">新歌</a>
+	              <a href="javascript:;" class="title">专辑</a>
+	            </div>
+	            <ul class="hotlist">
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/5245130?catalog=yueku2016" target="_blank">1.喜欢你 (原唱: Beyond)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/1245657?catalog=yueku2016" target="_blank">2.泡沫</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/7099691?catalog=yueku2016" target="_blank">3.再见(Live Piano Session II)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/4836506?catalog=yueku2016" target="_blank">4.后会无期-(电影《后会无期》同名主题歌)</a></li>
+
+
+
+	                <li><a href="http://www.kuwo.cn/yinyue/6683124?catalog=yueku2016" target="_blank">5.再见</a></li>
+
+	            </ul>
+	            <ul class="newlist"></ul>
+				<ul class="albumlist"></ul>
+	          </div>
+	        </div>
+	        <a href="/artist/content?name=g.e.m.邓紫棋" class="a_name">g.e.m.邓紫棋</a>
+	      </li>
+
+	    </ul>
+	  <!--  <div class="page" data-page="5511"></div>-->
+	</div>
+  	<div id="loading">
+	  	<img src="skin/images/loading.gif" />
+	  	<span>加载中...</span>
+  	</div>
+  </div>
+</div>
+
+<!-- 网站底部通用html -->
+<div id="footer">
+    <div class="footer">
+        <p class="f_link">
+            <a target="_blank" href="http://www.kuwo.cn/sitemap/index.html">网站地图</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/contact.jsp">联系我们</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/fuwu.html">广告服务</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/introduction.jsp">诚聘英才</a> |
+            <a target="_blank" href="/static/page/customer/customerservice.html">用户服务协议</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/NoBlameDoc.jsp">酷我音乐网站免责声明</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/ProtectDoc.jsp">酷我音乐网站著作保护声明</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/jianhu1.jsp">未成年人家长监护工程</a>
+        </p>
+        <p>
+            北京酷我科技有限公司版权所有 网络文化经营许可证：京网文[2012]0375-124号
+            <a target="_blank" href="http://image.kuwo.cn/www/shiting.pdf">信息网络传播视听节目许可证0109362号</a>
+            增值电信业务经营许可证B2-20090418 京ICP证060261号
+        </p>
+        <div>
+            <a target="_blank" href="http://img4.kwcdn.kuwo.cn/star/upload/9/9/1448348742489_.jpg">广播电视节目制作经营许可证京字第2037号</a>
+            <a target="_blank" href="http://img2.kwcdn.kuwo.cn/star/upload/5/5/1448349580069_.JPG">营业性演出许可证京市演1574</a>
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030216" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+				<img src="skin/images/ghs.png" style="float:left;"/>
+				<p style="float:left;height:20px;line-height:20px;margin: 5px 0px 0px 5px; color:#939393;">京公网安备 11010502030216号</p>
+			</a>&nbsp;&nbsp;京ICP备09014827号
+        </div>
+    </div>
+</div>
+<script>
+//    var _hmt = _hmt || [];
+//    (function() {
+//        var hm = document.createElement("script");
+//        hm.src = "//hm.baidu.com/hm.js?47fa0c42177f08ce640a93f4489e9319";
+//        var s = document.getElementsByTagName("script")[0];
+//        s.parentNode.insertBefore(hm, s);
+//    })();
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcdb524f42f0ce19b169a8071123a4797' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div class="zhanwei" style="height:60px;display: block;background: #000;"></div>
+</body>
+<script type="text/javascript" src="skin/js/common.js"></script>
+<script type="text/javascript" src="skin/js/artist.js"></script>
+<script>
+  index = '0';
+  setLeftNavPosition('0');
+
+  window.setTimeout(function(){
+    var playclick = new Image();
+    playclick.src="http://webstat.kuwo.cn/logtjsj/commsj/commjstj/www2016/www2016_artist_index.jpg";
+  },300);
+</script>
+</html>

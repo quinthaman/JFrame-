@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.01  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> 酷我音乐_中国领先的在线正版音乐网站 </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/type.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="css/search-form.css">
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <link rel="stylesheet" href="css/audioplayer.css" type="text/css" />
+  <script>
+			/*
+				VIEWPORT BUG FIX
+				iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+			*/
+			(function(doc){var addEvent='addEventListener',type='gesturestart',qsa='querySelectorAll',scales=[1,1],meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];function fix(){meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];doc.removeEventListener(type,fix,true);}if((meta=meta[meta.length-1])&&addEvent in doc){fix();scales=[.25,1.6];doc[addEvent](type,fix,true);}}(document));
+		</script>
+ </head>
+ <body>
+	<div id="kuwo">
+		<div id="biaoti">
+			<img src="image/logo.jpg" width="127" height="60" />
+			<ul>
+				<li><a href="#" class="important">首页</a></li>
+				<li><a href="#">榜单</a></li>
+				<li><a href="#">歌手</a></li>
+				<li><a href="#">下载酷我客户端</a></li>
+				<li class="type1"><a href="#">zhuxukh</a></li>
+				<li class="type2"><a href="#">注销</a></li>
+				<li class="type3"><span>更多服务
+					<ul class="type4">
+					<li><a href="#">VIP会员</a></li>
+					<li><a href="#">专辑</a></li>
+					<li><a href="#">分类</a></li>
+					<li><a href="#">MV</a></li>
+					<li><a href="#">活动</a></li>
+					<li><a href="#">图库</a></li>
+					<li><a href="#">娱乐</a></li>
+					</ul>
+					</span>
+				</li>
+			</ul>
+			<form onsubmit="submitFn(this, event);">
+				<div class="search-wrapper">
+					<div class="input-holder">
+						<input type="text" class="search-input" placeholder="寻找好音乐" />
+						<button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+					</div>
+					<span class="close" onclick="searchToggle(this, event);"></span>
+					<div class="result-container">
+					</div>
+				</div>
+			</form>
+			<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function searchToggle(obj, evt){
+				var container = $(obj).closest('.search-wrapper');
+
+				if(!container.hasClass('active')){
+					container.addClass('active');
+					evt.preventDefault();
+				}
+				else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+					 container.removeClass('active');
+					 // clear input
+					container.find('.search-input').val('');
+					// clear and hide result container when we press close
+					container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+				}
+			}
+			function submitFn(obj, evt){
+				value = $(obj).find('.search-input').val().trim();
+
+				_html = "Yup yup! Your search text sounds like this: ";
+				if(!value.length){
+					_html = "Yup yup! Add some text friend :D";
+				}
+				else{
+					_html += "<b>" + value + "</b>";
+				}
+
+				$(obj).find('.result-container').html('<span>' + _html + '</span>');
+				$(obj).find('.result-container').fadeIn(100);
+
+				evt.preventDefault();
+			}
+			</script>
+		</div>
+	</div>
+<div class="banner-box">
+	<div class="bd">
+        <ul>          	    
+				   <li>
+					   <div class="m-width">
+					   <a href="http://jx.kuwo.cn/653826?from=1001004053&optimize=1&uid=180967997&cid="><img src="image/1460105061922_.jpg" width="1366" /></a>
+							<div class="background">
+								<a href="http://jx.kuwo.cn/653826?from=1001004053&optimize=1&uid=180967997&cid="><span>不可不听的2016</span><br/>美到极致声音</a>
+							</div>
+					   </div>
+					</li>
+				<li>
+						<div class="m-width">
+						<a href="javascript:void(0);"><img src="image/1462521235165_.jpg" width="1366" /></a>
+							<div class="background">
+								<a href="#"><span>酷我音乐盒2016</span><br/>高音质版震撼来袭</a>
+							</div>
+						</div>
+				 </li>
+				 <li>
+						<div class="m-width">
+						<a href="http://album.kuwo.cn/album/h/hdSub?id=2031&from=www"><img src="image/1465660006790_.jpg" width="1366" /></a>
+							<div class="background">
+								<a href="http://album.kuwo.cn/album/h/hdSub?id=2031&from=www"><span>我想和你唱</span><br/>第六期</a>
+							</div>
+					 </div>
+				 </li>
+				 <li>
+						<div class="m-width">
+						<a href="http://album.kuwo.cn/album/h/hdSub?id=2052&from=www"><img src="image/1465725772921_.jpg" width="1366" /></a>
+							<div class="background">
+								<a href="http://album.kuwo.cn/album/h/hdSub?id=2052&from=www"><span>魔兽世界</span><br/>王者归来</a>
+							</div>
+					</li>  
+				 <li>
+						<div class="m-width">
+						<a href="http://album.kuwo.cn/album/h/hdSub?id=2053&from=www"><img src="image/1465826575902_.jpg" width="1366" /></a>
+							<div class="background">
+								<a href="http://album.kuwo.cn/album/h/hdSub?id=2053&from=www"><span>不眠足球夜</span><br/>欧洲杯音乐精选</a>
+							</div>
+						</div>
+					</li>
+				 <li>
+						<div class="m-width">
+						<a href="http://album.kuwo.cn/album/h/hdSub?id=2055&from=www"><img src="image/1465913365534_.jpg" width="1366" /></a>	
+							<div class="background">
+								<a href="http://album.kuwo.cn/album/h/hdSub?id=2055&from=www"><span>超人气华语</span><br/>组合金曲</a>
+							</div>
+					</li>
+				 <li>
+						<div class="m-width">
+						<a href="javascript:void(0);"><img src="image/1465972211122_.jpg" width="1366"/></a>	
+							<div class="background">
+								<a href="#"><span>U-KISS《STALKER》</span><br/>魅力变身性感回归</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+    </div>
+    <div class="banner-btn">
+        <a class="prev" href="javascript:void(0);"></a>
+        <a class="next" href="javascript:void(0);"></a>
+        <div class="hd"><ul></ul></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".prev,.next").hover(function(){
+		$(this).stop(true,false).fadeTo("show",0.9);
+	},function(){
+		$(this).stop(true,false).fadeTo("show",0.4);
+	});
+	
+	$(".banner-box").slide({
+		titCell:".hd ul",
+		mainCell:".bd ul",
+		effect:"fold",
+		interTime:3500,
+		delayTime:500,
+		autoPlay:true,
+		autoPage:true, 
+		trigger:"click" 
+	});
+
+});
+</script>
+
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+	<div class="polo">
+		<div id="vg" >
+			<audio preload="auto" controls>
+				<source src="music/Here's to You.mp3">
+				<source src="audio/BlueDucks_FourFlossFiveSix.ogg">
+				<source src="audio/BlueDucks_FourFlossFiveSix.wav">
+			</audio>
+			<script src="js/jquery.js"></script>
+			<script src="js/audioplayer.js"></script>
+			<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+		</div>
+	</div>
+
+	<div id="huodong">
+	<div id="image">
+		<a href="http://weibo.com/mbckorea?refer_flag=1001030102_&is_hot=1" class="type1"><img src="image/1465959952130_.jpg"/ title="2016MBC冠军秀第九期"></a>
+		<a href="http://weibo.com/1738434147/DAcBbFvAF?type=comment#_rnd1466209346704" class="type2"><img src="image/1465893326893_.jpg"/ title="乐范-胡夏，汪小敏专场"></a>
+	</div>
+	</div>
+
+	<div id="ge">
+				<h1>歌单<span><a href="http://yinyue.kuwo.cn/yy/category.htm">查看更多</a></span></h1>
+				<ul>
+					<li><img src="image/1461561898863_.jpg" width="220"; height="220"/><img src="image/font-366.png" width="50" height="50" class="png" /><p><a href="http://www.kuwo.cn/playlist/index?pid=1082685104">每日最新单曲</a></p></li>
+					<li><img src="image/1455342310364_132026710b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1082685106">酷我热门单曲</a></p></li>
+					<li><img src="image/1455592122915_132026710b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1082656711">每日最新网络单曲</a></p></li>
+					<li><img src="image/1453967239975_185766193b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1163941465">每日最新DJ舞曲</a></p></li>
+					<li><img src="image/1444623850992_185766193b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1185421675">每日最新伤感情歌</a></p></li>
+					<li><img src="image/1452244369390_185766193b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1163945334">每日最新影视单曲</a></p></li>
+					<li><img src="image/1437030245804_185766193b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1163943627">每日最新90后歌曲</a></p></li>
+					<li><img src="image/1435275959597_141050697b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1162441383">每日最新欧美单曲</a></p></li>
+					<li><img src="image/1432971445330_141050697b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1421315563">每日最新日韩单曲</a></p></li>
+					<li><img src="image/1432544148941_141050697b.jpg" width="220"; height="220"/><p><a href="http://www.kuwo.cn/playlist/index?pid=1162443613">每日最新韩剧原声</a></p></li>
+				</ul>
+				<h1>歌手<span><a href="歌手.html">查看更多</a></span></h1>
+				<ul class="type23">
+					<li><img src="image/font-366.png" width="50" height="50" class="png" /><span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=%E9%83%91%E5%AE%B9%E5%92%8C">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3386559">1.你为我着迷</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/1043947">2.因为想念</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6240762">3.Checkmate</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/665870">4.Promise(《原来是美男啊》韩...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6242520">5.美好的一天(One Fine Day)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6187467">6.星星，你</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/5637661">7.因为想你</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/1103030">8.平语颂</a><br/>
+					</div>
+					<img src="image/a.png" width="220"; height="360"/></li>
+					<li><span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=%E5%BC%A0%E9%9F%B6%E6%B6%B5">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/2836723">1.淋雨一直走(Keep Walking)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/291598">2.隐形的翅膀</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/590273">3.白白的</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3618557">4.淋雨一直走</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/590275">5.看得最远的地方-(电视剧《爱的...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/283026">6.遗失的美好(Live)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/344896">7.亲爱的，那不是爱情</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/85404">8.遗失的美好</a><br/>
+					</div>
+					<img src="image/b.png" width="220"; height="360"/></li>
+					<li><span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=G-Dragon">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3641599">1.Crooked</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6251795">2.放纵(现场版)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6176524">3.Fantastic Baby(2014MAMA In...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7119798">4.Crooked(现场版)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3657029">5.Who You</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6176523">6.Good Boy (2014MAMA In HK)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6418166">7.一天一天(中文版)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/2692873">8.Missing You</a><br/>
+					</div>
+					<img src="image/c.png" width="220"; height="360"/></li>
+					<li><span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=%E7%99%BD%E5%A8%A5%E5%A8%9F">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7100408">1.So-So</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7100407">2.Something To Say</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6449283">3.Shouldn‘t Have</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3398600">4.A Good Boy</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6599337">5.我们这样</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3317278">6.爱情学概论</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/4836892">7.Morning Of Canon</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3218601">8.长腿叔叔 (Acoustic Ver.)</a><br/>
+					</div>
+					<img src="image/d.png" width="220"; height="360"/></li>
+					<li><span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=Gary">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6415887">1.生日快乐(四大巨星版)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7083309">2.好像飞机</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3970517">3.等一会洗澡</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6623012">4.Joa</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3970565">5.等一会洗澡</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6623999">6.Halyang Dream</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6623009">7.Empty</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6623291">8.Alcohol Feeling (Acoustic Ver.)</a><br/>
+					</div>
+					<img src="image/e.png" width="220"; height="360"/></li>
+					<li>
+					<span class="wid"></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=Gary">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109681">1.L.I.E</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/7109676">1.夏，秋，冬，春</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/5271714">2.Up Down</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/7109677">2.Good</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109680">3.能不能送我</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/7109687">3.当然</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109686">4.Only One</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/5269896">4.上和下</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109679">5.L.I.E(Jannabi Mix)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/6714572">5.Hot Pink</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109682">6.明知道</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/6409267">6.Ah Yeah</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109678">7.Hot Pink(Remix)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/yinyue/7128698">7.L.I.E(舞蹈版)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7109684">8.Cream</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://www.kuwo.cn/yinyue/2838789">8.每夜</a><br/>
+					</div>
+					<img src="image/f.png" width="470"; height="360"/></li>
+					<li>
+					<span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=%E5%91%A8%E7%AC%94%E7%95%85">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/115219">1.笔记</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7091694">2.两陷-(电影《寒战2》主题曲)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7044388">3.Longing For You-(电影《梦想...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6716081">4.片羽时光-(电影《怦然星动》插...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/639037">5.这句话</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/206169">6.笔记</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/5738408">7.别忘了</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6440354">8.若不是那次夜空(电影《重生爱...</a><br/>
+					</div>
+					<img src="image/g.png" width="220"; height="360"/></li>
+					<li>
+					<span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/artist/content?name=Melanie%20Martinez">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6562094">1.Alphabet Boy(Explicit)</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6562296">2.Carousel</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/4016451">3.Dollhouse</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6562097">4.Pity Party</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6562095">5.Soap</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6562086">6.Mad Hatter</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/3192142">7.Seven Nation Army (The Voic...</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6716239">8.Soap/Training Wheels Doubl...</a><br/>
+					</div>
+					<img src="image/h.png" width="220"; height="360"/></li>
+					<li>
+					<span></span><div class="text">热门单曲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kuwo.cn/mingxing/%E9%99%88%E5%A5%95%E8%BF%85?catalog=yueku2016">查看全部</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/7131129?catalog=yueku2016">1.在这个世界相遇</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/110247?catalog=yueku2016">2.浮夸</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/239519?catalog=yueku2016">3.好久不见</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/239520?catalog=yueku2016">4.红玫瑰</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/6655007?catalog=yueku2016">5.陪你度过漫长岁月</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/236687?catalog=yueku2016">6.淘汰</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/382425?catalog=yueku2016">7.不要说话</a><br/>
+					<a href="http://www.kuwo.cn/yinyue/1694640?catalog=yueku2016">8.因为爱情</a><br/>
+					</div>
+					<img src="image/rBACE1O02Cyhl1GLAAEUU3PCYKA346.jpg" width="220"; height="360"/></li>
+				</ul>
+				<div class="he">
+					<span>合作伙伴:</span><span class="type2">联系QQ : 570487322</span><br/>
+					<ul>
+						<li><a href="http://www.yaolan.com/">育儿</a></li>
+						<li><a href="http://www.zhcw.com/">彩票</a></li>
+						<li><a href="http://www.zongheng.com/">小说</a></li>
+						<li><a href="http://dl.pconline.com.cn/">太平洋下载</a></li>
+						<li><a href="http://www.yue365.com/">365音乐网</a></li>
+						<li><a href="http://pc.tgbus.com/">单机游戏</a></li>
+						<li><a href="http://download.pchome.net/">Pchome下载中心</a></li>
+						<li><a href="http://tech.sina.com.cn/down/">新浪下载</a></li>
+						<li><a href="http://www.tianqi.com/">天气预报查询</a></li>
+						<li><a href="http://car.bitauto.com/">汽车大全</a></li>
+						<li><a href="http://www.manmankan.com/">漫漫看</a></li>
+						<li><a href="http://www.qqtn.com/">QQ下载</a></li>
+						<li><a href="http://www.pc6.com/">pc6软件下载</a></li>
+						<li><a href="http://www.111ttt.com/">dj舞曲</a></li>
+						<li><a href="http://www.xingzuo360.cn/">星座查询</a></li>
+						<li><a href="http://www.mtv123.com/">叮当音乐网</a></li>
+						<li><a href="http://www.pyjsh.com/">女人花</a></li>
+						<li><a href="http://www.5nd.com/">5and音乐网</a></li>
+						<li><a href="http://www.7399.com/">7399小游戏</a></li>
+						<li><a href="http://www.120ask.com/">有问必答网</a></li>
+						<li><a href="http://xiazai.zol.com.cn/">ZOL应用下载</a></li>
+						<li><a href="http://www.qqzf.cn/">励志名人名言</a></li>
+						<li><a href="http://www.hc360.com/">慧聪网</a></li>
+						<li><a href="http://www.duote.com/">多特软件下载</a></li>
+						<li><a href="http://www.meilele.com/beijing/">美乐乐家居网</a></li>
+						<li><a href="http://dianying.2345.com/">2345电影</a></li>
+						<li><a href="http://www.xiazaiba.com/">软件下载</a></li>
+					</ul>
+				</div>
+	</div>
+	<div id="di">
+		<div class="text">
+			<ul>
+				<li><a href="http://www.kuwo.cn/sitemap/index.html">&nbsp;网站地图 | </a> 
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/contact.jsp">&nbsp;联系我们 | </a> 
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/fuwu.html">&nbsp;广告服务 | </a> 
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/introduction.jsp">&nbsp;诚聘英才 | </a> 
+				<li><a href="http://www.kuwo.cn/static/page/customer/customerservice.html">&nbsp;用户服务协议 | </a>
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/NoBlameDoc.jsp">&nbsp;酷我音乐网站免责声明 | </a>
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/ProtectDoc.jsp">&nbsp;酷我音乐网站著作保护声明 | </a>
+				<li><a href="http://yinyue.kuwo.cn/yy/s2/jianhu1.jsp">&nbsp;未成年人家长监护工程 </a>
+			</ul>
+			<ul class="type1">
+				<li>北京酷我科技有限公司版权所有 网络文化经营许可证：京网文[2012]0375-124号<a href="http://image.kuwo.cn/www/shiting.pdf"> 信息网络传播视听节目许可证0109362号</a> 增值电信业务经营许可证B2-20090418 京ICP证060261号 </li>
+			</ul>
+			<ul class="type2">
+				<li><a href="http://img4.kwcdn.kuwo.cn/star/upload/9/9/1448348742489_.jpg">广播电视节目制作经营许可证京字第2037号 </a><a href="http://img2.kwcdn.kuwo.cn/star/upload/5/5/1448349580069_.JPG"> 营业性演出许可证京市演1574 </a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030216"><img src="image/ghs.png">京公网安备11010502030216号&nbsp;京ICP备09014827号</a></li>
+			</ul>
+		</div>
+	</div>
+ </body>
+</html>

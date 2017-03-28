@@ -1,0 +1,265 @@
+﻿#common_css_ver {
+    height: 100
+}
+
+#head {
+    height: 940px
+}
+
+#top {
+    height: 50px;
+    background: #181818
+}
+
+#top .top {
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px
+}
+
+#top .top .logo {
+    float: left;
+    display: block;
+    height: 50px;
+    width: 106px
+}
+
+#top .top .nav {
+    float: left;
+    height: 50px
+}
+
+#top .top .nav li {
+    float: left;
+    font-size: 18px;
+    margin: 11px 0 0 60px;
+    display: inline
+}
+
+#top .top .nav li a {
+    color: #fff
+}
+
+#top .top .nav li a.active {
+    color: #feca2e
+}
+
+#top .top .tools {
+    float: right;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px
+}
+
+#top .top .tools a {
+    color: #fff
+}
+
+#top .top .tools ul.choose {
+    float: right
+}
+
+#top .top .tools ul.choose li {
+    float: left;
+    margin-right: 20px
+}
+
+#top .top .tools ul.choose li a {
+    background: url(../images/icon.png) no-repeat
+}
+
+#top .top .tools ul.choose .show a {
+    background-position: -230px -23px;
+    padding-left: 20px
+}
+
+#top .top .tools ul.choose .game a {
+    background-position: -169px -23px;
+    padding-left: 20px
+}
+
+#top .top .tools ul.choose .book a {
+    background-position: -105px -23px;
+    padding-left: 20px
+}
+
+#top .top .tools ul.choose .earphone a {
+    background: url(../images/earphone.png) left center no-repeat;
+    padding-left: 20px
+}
+
+#top .top .tools .more {
+    float: right;
+    position: relative;
+    z-index: 1
+}
+
+#top .top .tools .more p {
+    cursor: pointer;
+    color: #fff
+}
+
+#top .top .tools .more ul {
+    position: absolute;
+    top: 50px;
+    left: -23px;
+    width: 110px;
+    background: url(../images/morebg.png);
+    font-size: 12px;
+    padding-top: 4px;
+    display: none
+}
+
+#top .top .tools .more ul li {
+    height: 30px;
+    line-height: 30px;
+    text-indent: 23px
+}
+
+#top .top .tools .more ul li a {
+    display: block;
+    color: #d6d6d6
+}
+
+#top .top .tools .more ul li a:hover {
+    background: url(../images/morebg.png);
+    color: #fff
+}
+
+#top .top .tools .search {
+    float: right;
+    width: 200px;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    background: url(../images/searchbg.jpg);
+    margin: 13px 0 0 20px;
+    position: relative;
+    z-index: 1;
+    display: inline
+}
+
+#top .top .tools .search input {
+    float: left;
+    width: 160px;
+    height: 25px;
+    color: #999;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    background: 0
+}
+
+#top .top .tools .search a.searchBtn {
+    float: right;
+    width: 30px;
+    height: 25px;
+    display: block
+}
+
+.searchInfo {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 200px;
+    height: auto;
+    background: url(../images/searchbg.png) repeat;
+    font-size: 12px;
+    display: none
+}
+
+.searchInfo ul {
+    padding: 5px 0
+}
+
+.searchInfo ul li a {
+    color: #fff;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.searchInfo ul li a:hover {
+    background: url(../images/searchbg.png) repeat
+}
+
+#loading {
+    display: none;
+    position: absolute;
+    left: 453px;
+    top: 100px;
+    z-index: 999
+}
+
+#loading img {
+    margin-right: 10px;
+    display: inline
+}
+
+#loading span {
+    color: #333
+}
+
+.page {
+    float: left;
+    height: 30px;
+    text-align: center;
+    padding: 25px 0 60px 0
+}
+
+.page a {
+    float: left;
+    font-size: 12px;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin-right: 5px;
+    background: url(../images/page.jpg)
+}
+
+.page .point {
+    float: left;
+    margin: 0 19px 0 14px;
+    height: 26px;
+    line-height: 26px;
+    color: #999
+}
+
+.page a img {
+    margin-top: 10px;
+    display: inline
+}
+
+.page .current {
+    background: url(../images/current.jpg);
+    color: #fff
+}
+
+#footer {
+    height: 160px;
+    background: #181818
+}
+
+.footer {
+    width: 1200px;
+    margin: 0 auto;
+    color: #999;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 34px
+}
+
+.footer a, .footer p {
+    color: #999
+}
+
+.footer .f_link {
+    color: #333
+}
